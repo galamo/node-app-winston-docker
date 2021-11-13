@@ -19,6 +19,7 @@ const app = express();
 app.get('/', (req, res) => {
     logger.info(`Request Started ${Date.now().toString()}`)
     res.send('Hello World');
+    logger.info(`Request Finished ${Date.now().toString()}`)
 });
 app.listen(PORT);
 console.log(`Running on http:localhost:${PORT}`);

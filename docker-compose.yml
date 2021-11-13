@@ -6,7 +6,7 @@ services:
     ports:
       - 3050:3050
     volumes:
-      - logs:usr/src/app/
+      - ./logs:/usr/src/app/logs
   mongo:
     image: mongo
     ports:
