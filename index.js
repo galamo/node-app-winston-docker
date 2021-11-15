@@ -1,6 +1,6 @@
 const express = require('express');
 const winston = require('winston');
-
+const con = require("./connection")
 const logger = winston.createLogger({
     level: 'info',
     format: winston.format.json(),
@@ -9,6 +9,8 @@ const logger = winston.createLogger({
         new winston.transports.File({ filename: './logs/info.log', level: 'info' }),
     ],
 });
+
+con();
 
 
 // Constants
